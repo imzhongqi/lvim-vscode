@@ -24,7 +24,9 @@ lvim.builtin.treesitter.highlight.enable = false
 lvim.builtin.treesitter.textsubjects.enable = false
 lvim.builtin.treesitter.indent.enable = false
 
-lvim.colorscheme = ""
+vim.schedule(function()
+    vim.api.nvim_set_hl(0, "EndOfBuffer", {})
+end)
 
 local lkmaps = require("lvim.keymappings")
 lkmaps.clear(lkmaps.load_defaults())

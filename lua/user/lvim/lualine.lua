@@ -41,9 +41,9 @@ if lvim.colorscheme == "primer_dark" then
       info = "I",
       hint = "H",
     },
-    colored = false, -- Displays diagnostics status in color if set to true.
+    colored = false,          -- Displays diagnostics status in color if set to true.
     update_in_insert = false, -- Update diagnostics in insert mode.
-    always_visible = true, -- Show diagnostics even if there are none.
+    always_visible = true,    -- Show diagnostics even if there are none.
   }
   local copilot = function()
     local buf_clients = vim.lsp.get_active_clients { bufnr = 0 }

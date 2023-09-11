@@ -5,9 +5,7 @@ return function()
   end
 
   surround.setup {
-    keymaps = { -- vim-surround style keymaps
-      insert = "<C-g>s",
-      insert_line = "<C-g>S",
+    keymaps = {
       normal = "s",
       normal_cur = "ss",
       normal_line = "S",
@@ -21,4 +19,3 @@ return function()
 
   vim.cmd [[nmap <leader>' siw']]
 end
-

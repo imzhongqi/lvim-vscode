@@ -10,6 +10,10 @@ local plugins = {
   },
 
   {
+    "andymass/vim-matchup",
+  },
+
+  {
     "MunifTanjim/nui.nvim"
   },
 
@@ -30,9 +34,15 @@ local plugins = {
     config = _("surround"),
   },
 
+  { "tpope/vim-repeat" },
+
   {
-    "ggandor/lightspeed.nvim",
-    event = "BufRead",
+    "ggandor/flit.nvim",
+    dependencies = {
+      "ggandor/leap.nvim",
+      "tpope/vim-repeat",
+    },
+    config = _("flit")
   },
 
   {
@@ -52,6 +62,16 @@ local plugins = {
     event = "BufRead",
     cond = not_vscode,
   },
+
+  {
+    "olexsmir/gopher.nvim",
+    cond = not_vscode,
+  },
+
+  {
+    "leoluz/nvim-dap-go",
+    cond = not_vscode,
+  }
 }
 
 return plugins

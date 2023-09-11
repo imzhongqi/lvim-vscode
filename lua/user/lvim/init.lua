@@ -1,10 +1,21 @@
 lvim.plugins = require("user.plugins")
 
-reload "user.lvim.config"
-reload "user.lvim.treesitter"
-reload "user.lvim.nvimtree"
-reload "user.lvim.lualine"
+local function load(names)
+  for _, name in ipairs(names) do
+    reload(string.format("user.lvim.%s", name))
+  end
+end
+
+load {
+  "config",
+  "cmp",
+  "bufferline",
+  "treesitter",
+  "nvimtree",
+  "lualine",
+  "matchup",
+}
 
 if vim.g.vscode then
-  require "user.lvim.vscode"
+  reload "user.lvim.vscode"
 end

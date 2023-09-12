@@ -22,18 +22,21 @@ end
 local keymaps = {
     -- multi-line macro
     x = {
-        ["@"] = [[:<C-u>execute "'<,'>normal @".nr2char(getchar())<CR>]],
+        ["@"] = [[:<C-u>execute "'<,'>normal @".nr2char(getchar())<cr>]],
     },
 
     i = {
         [";;"] = {
-            callback = "<ESC>",
+            callback = "<esc>",
             opts = { remap = true },
         },
     },
 
     n = {
-        ["<leader>h"] = "<Cmd>nohl<CR>",
+        ["Q"] = "<cmd>bd<cr>",
+        ["<C-q>"] = "<cmd>q!<cr>",
+        ["<C-c><C-c>"] = "<cmd>qa!<cr>",
+        ["<leader>h"] = "<Cmd>nohl<cr>",
         ["<localleader>rn"] = function ()
            require("vscode-neovim").call("editor.action.rename")
         end,

@@ -2,7 +2,13 @@ lvim.plugins = require("user.plugins")
 
 local function load(names)
   for _, name in ipairs(names) do
-    reload(string.format("user.lvim.%s", name))
+    if type(name) == "table" then
+      if not name["disable"] then
+        reload(string.format("user.lvim.%s", name[1]))
+      end
+    else
+      reload(string.format("user.lvim.%s", name))
+    end
   end
 end
 
@@ -14,6 +20,7 @@ load {
   "nvimtree",
   "lualine",
   "matchup",
+  { "which-key", disable = vim.g.vscode }
 }
 
 if vim.g.vscode then

@@ -24,7 +24,6 @@ lvim.builtin.nvimtree.setup.renderer.icons.glyphs.folder.arrow_closed = ""
 -- lvim.builtin.nvimtree.setup.renderer.icons.glyphs.folder.default = ""
 -- lvim.builtin.nvimtree.setup.renderer.icons.glyphs.folder.empty = ""
 -- lvim.builtin.nvimtree.setup.renderer.icons.glyphs.folder.symlink = ""
-lvim.builtin.nvimtree.setup.view.centralize_selection = true
 -- lvim.builtin.nvimtree.setup.view.cursor = false
 
 -- vim.api.nvim_create_autocmd({ 'WinEnter', 'BufWinEnter' }, {

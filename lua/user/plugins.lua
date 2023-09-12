@@ -71,6 +71,30 @@ local plugins = {
   {
     "leoluz/nvim-dap-go",
     cond = not_vscode,
+  },
+
+  {
+    "nacro90/numb.nvim",
+    cond = not_vscode,
+    config = _("numb")
+  },
+
+  {
+    "ThePrimeagen/harpoon",
+    cond = not_vscode,
+    config = _("harpoon")
+  },
+
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v3.x",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+      "MunifTanjim/nui.nvim",
+    },
+    cond = not_vscode,
+    config = _("neo-tree")
   }
 }
 
